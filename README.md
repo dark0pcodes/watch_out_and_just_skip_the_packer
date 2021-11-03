@@ -52,4 +52,9 @@ Understanding UPX
 3. Finding the OEP
 4. Dumping and fixing the unpacked PE
 
-### 
+### Hybrid Packers (Injection - Substitution) 
+1. The importance of [VirtualAlloc](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc)
+2. Finding the "shellcode"
+4. Finding the "Tail jump"
+5. Finding the OEP
+4. Dumping and fixing the unpacked PE
