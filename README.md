@@ -1,2 +1,3 @@
-# watch_out_and_just_skip_the_packer
+# Watch Out! And just skip the packer
+
 Ekoparty BlueSpace Workshop
