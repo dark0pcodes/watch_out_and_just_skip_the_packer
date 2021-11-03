@@ -21,11 +21,29 @@ Ekoparty BlueSpace Workshop 2021
 
 ## Hands-On
 ### Is it packed?
-1. Signature-based detection. Ex: [Detect It Easy](https://github.com/horsicq/DIE-engine/releases)
+1. Signature-based detection:
+
+    Depending on the packer you are facing, it could be easily detected Ex: [Detect It Easy](https://github.com/horsicq/DIE-engine/releases)
+    
+    ![image](https://user-images.githubusercontent.com/8562692/140227209-a93b7d07-afe6-45cf-b8d4-8229c013159c.png)
+
+
 2. Strings, imports and exports analysis
-4. PE structure analysis
-5. Entropy analysis 
-6. Dynamic results vs static characteristics
+    dfsdfsdfsdf
+    
+    ![image](https://user-images.githubusercontent.com/8562692/140229300-c5748c5c-2ca2-449b-825e-6d5c3710ac7b.png)
+
+3. PE structure analysis
+    hfhgffhgfh
+    
+    ![image](https://user-images.githubusercontent.com/8562692/140231353-3c6b4197-d1a2-4806-9fe7-f148ee096456.png)
+
+4. Entropy analysis 
+    sdfadfasdasd
+    
+    ![image](https://user-images.githubusercontent.com/8562692/140231605-67130b78-fdd7-4012-b0ab-5a8437dac2f5.png)
+
+5. Dynamic results vs static characteristics
 
 ### Code Substitution Packers 
 Understanding UPX
