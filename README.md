@@ -2,7 +2,7 @@
 
 Ekoparty BlueSpace Workshop 2021
 
-## Requiremetns
+## Requirements
 * Máquina virtual: https://drive.google.com/file/d/1AdC0ceCzjfADOc-Gn4veEqNFYEQwzmlX/view?usp=drivesdk
 * 
 
