@@ -57,10 +57,16 @@ Understanding UPX
 
 ![image](https://user-images.githubusercontent.com/8562692/140238552-4b9cbaa4-69ea-47a0-a689-5cc64a8a6c0c.png)
      
-2. Finding the "shellcode"
+2. Finding first injected shellcode (LocalAlloc)
 
 ![image](https://user-images.githubusercontent.com/8562692/140239467-9b79442f-3b26-49f8-911c-dc82d8b8f9c9.png)
 
-4. Finding the "Tail jump"
-5. Finding the OEP
-6. Dumping and fixing the unpacked PE
+3. Finding second injected shellcode (VirtualAlloc)
+
+
+
+4. Payload decryption (VirtualAlloc)
+5. Code substitution (VirtualProtect)
+6. Finding the "Tail jump"
+7. Finding the OEP
+8. Dumping and fixing the unpacked PE
