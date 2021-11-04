@@ -57,7 +57,8 @@ Ekoparty BlueSpace Workshop 2021
     This validation is quite simple, just execute the sample in your VM and compare the behavior with the static characteristics of the sample (strings, imports, exports); if there's a mismatch between both analyses, it is clear that something is hiding the true nature of the sample.
 
 ### Code Substitution Packers 
-Understanding UPX
+*For this section of the workshop you can use files "packed_Remcos.exe" or "upx_REvil.exe".*
+
 1. Finding the *Tail jump*
 
     Even though UPX is one of the easiest packers to understand and defeat, it is still being used by Threat Actors, specially as a second protection layer (yes, you can find samples protected with multiple layers of packing code). 
@@ -107,7 +108,9 @@ Understanding UPX
 
 ![image](https://user-images.githubusercontent.com/8562692/140296881-8fa1468e-955a-4f50-90d5-325c9fe5c7f6.png)
 
-### Hybrid Packers (Injection - Substitution) 
+### Hybrid Packers (Injection - Substitution)
+*Note: For this section of the workshop you will use file "custom_packer_REvil.exe".*
+
 1. The importance of [VirtualAlloc](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc), [LocalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-localalloc) and [GlobalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-globalalloc)
 
     Any packer that uses injection MUST allocate additional memory sections in which the code will be written and executed. This task can be done using the Windows APIs *VirtualAlloc*, *LocalAlloc* and *GlobalAlloc*. You should keep track of these APIs when handling this kind of packers.
@@ -118,7 +121,7 @@ Understanding UPX
      
 2. Finding first injected shellcode (LocalAlloc)
 
-    Our first stop 
+    Our first stop during the analysis of this sample 
 
 ![image](https://user-images.githubusercontent.com/8562692/140274435-652cae1f-a34d-46b7-8f61-01fb774676d0.png)
 ![image](https://user-images.githubusercontent.com/8562692/140274562-41ce1163-6386-4334-900e-d435f0d7bd7e.png)
@@ -149,6 +152,7 @@ Understanding UPX
     For this, jus repeat the steps followed when unpacking UPX.
     
 ### Code Injection Packers (Proccess Injection)
+*You can practice and study some of the techniques with files "pe_injection_CyberGate.exe" or "run_pe_Remcos.exe".*
 Aside from the packers already explained, there is a special type that injects its malicious code into external processes to make its detection harder. The study of those packers out of the scope of this workshop by now. However, in case you are curious enought to study this topic by your own, I recommend you the following literature:
 
 * https://attack.mitre.org/techniques/T1055/
