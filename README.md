@@ -60,6 +60,16 @@ Ekoparty BlueSpace Workshop 2021
 Understanding UPX
 1. Finding the "Tail jump"
 
+    Even though UPX is one of the easiest packers to understand an defeat, it is still being used by Threat Actors, specially as a second protection layer (yes, you can find samples protected with multiple layers of packing code). 
+    
+    In this workshop, we are going to used UPX to learn one of the key concepts of unpacking; the famous *tail jump*. By definition, the *tail jump* is the instruction in which the packer execution ends and the control flow is redirected to the entry point of the unpacked sample. This jump can be implemented in several different ways, some of them are listed below:
+    * `JMP OEP_ADDRESS`
+    * `CALL OEP_ADDRESS`
+    * `PUSH OEP_ADDRESS -> RETN`
+
+This implementation may vary depending of the Threat Actors intensions and their skills to avoid security tools. However the main characteristic that help you recognize the *tail jump* of a packer is "a redirection of the control flow to a section of code far from the current address".
+
+
 ![image](https://user-images.githubusercontent.com/8562692/140295316-de9617d6-b51a-4b7a-b055-171790b59223.png)
 
 2. The importance of [VirtualProtect](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect)
