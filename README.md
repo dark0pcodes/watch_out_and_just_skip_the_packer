@@ -36,7 +36,9 @@ Ekoparty BlueSpace Workshop 2021
 
 3. PE structure analysis:
     
-    If you look at the sections of a PE file you will find two interesting values: *raw-size* and *virtual-size*. These values inform the OS the size of each section in disk and the required space in memoy to handle its corresponding data. In an unpacked sample, these values have comparable magnitudes, however in some packers you will see a huge difference, this is a great indicator that something is hidden. Below, the information of each section of the packed sample (left) and unpacked sample (right) are presented. 
+    If you look at the sections of a PE file you will find two interesting values: *raw-size* and *virtual-size*. These values inform the OS the size of each section in disk and the required space in memoy to handle its corresponding data. 
+    
+    In an unpacked sample, these values have comparable magnitudes, however in some packers you will see a huge difference, this is a great indicator that something is hidden. Below, the information of each section of the packed sample (left) and unpacked sample (right) are presented. 
     
     ![image](https://user-images.githubusercontent.com/8562692/140231353-3c6b4197-d1a2-4806-9fe7-f148ee096456.png)
 
