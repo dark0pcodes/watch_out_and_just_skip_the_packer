@@ -67,10 +67,11 @@ Understanding UPX
     * `CALL OEP_ADDRESS`
     * `PUSH OEP_ADDRESS -> RETN`
 
-This implementation may vary depending of the Threat Actors intensions and their skills to avoid security tools. However the main characteristic that help you recognize the *tail jump* of a packer is "a redirection of the control flow to a section of code far from the current address".
+    This implementation may vary depending of the Threat Actors intensions and their skills to avoid security tools. However the main characteristic that help you recognize the *tail jump* of a packer is "a redirection of the control flow to a section of code far from the current address".
+    
+    If you want to find the UPX *tail jump*, just start debugging an UPX-protected sample, go to the entry point of the packer and scroll down; you will see a JMP instruction right before a bunch of 0x00 (OPCODES). See the picture below.
 
-
-![image](https://user-images.githubusercontent.com/8562692/140295316-de9617d6-b51a-4b7a-b055-171790b59223.png)
+![image](https://user-images.githubusercontent.com/8562692/140300397-5854440d-2311-42a8-9abf-7bd369d2a86b.png)
 
 2. The importance of [VirtualProtect](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect)
 
