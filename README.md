@@ -75,6 +75,10 @@ Understanding UPX
 
 2. The importance of [VirtualProtect](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect)
 
+    Based on its documentation, *VirtualProtect* is a Windows API that allows to "change the protection on a region of committed pages in the virtual address space of the calling process". This is quite important when dealing with packers because they constantly update the protections of all the different memory pages that are used in the unpacking logic in order to write and execute the original code.
+    
+    In the case of UPX (which is a substitution packer, see picture below) it uses this API a few lines of code before hitting the *tail jump*. You could think that this only happens in UPX, but it is actually very common, packers usually called *VirtualProtect* in the code that is close to its tail jump, so you need to keep alway an eye on this API. 
+
 ![image](https://user-images.githubusercontent.com/8562692/140294933-d12eaed3-06e3-467f-9461-254d4754d4c9.png)
 
 3. Finding the OEP
