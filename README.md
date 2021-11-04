@@ -156,11 +156,15 @@ Ekoparty BlueSpace Workshop 2021
 
 5. Code substitution (VirtualProtect)
 
-    At this point, we know that the payload exists in memory just waiting to be copied to the final destination. Given that the packed code will be replaced by the unpacked sample  
+    At this point, we know the payload is waiting in memory just to be copied to the final destination. So, the last missing piece of the analysis is to capture the section responsible of replacing the code. To do that we are going to set a new breackpoint in *VirtualProtect*; this is because memory protection MUST be changed if the packer wants to replace the code. 
+    
+    Once the breakpoint is hit, take a minute to see the arguments passed (see picture below), and you will see that it is trying to set *PAGE_EXECUTE_READWRITE* permissions in the address 0x400000 which is the exact same base address of the packed code!
 
 ![image](https://user-images.githubusercontent.com/8562692/140276292-8a1577ce-df14-4278-bf25-3322d3e51c89.png)
 
 6. Finding the "Tail jump"
+
+Finally if you want to find the tail jump, just scroll a little bit. You will see it, it is not that difficult isn't it?
 
 ![image](https://user-images.githubusercontent.com/8562692/140276841-d722df0e-34bf-450f-8a49-64f02adfcdd0.png)
 
