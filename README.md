@@ -174,8 +174,7 @@ Finally if you want to find the tail jump, just scroll down a little bit. You wi
 
 ![image](https://user-images.githubusercontent.com/8562692/140277622-893bde4c-0270-4c38-befd-67b29b4f6a1c.png)
 
-8. Dump the unpacked PE and fix the IAT
-    For this, jus repeat the steps followed when unpacking UPX.
+8. Dump the unpacked PE and fix the IAT just as you did when unpacking UPX.
     
 ### Code Injection Packers (Proccess Injection)
 *You can practice and study some of the techniques with files "pe_injection_CyberGate.exe" or "run_pe_Remcos.exe".*
