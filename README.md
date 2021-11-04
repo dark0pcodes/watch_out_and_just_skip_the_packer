@@ -58,7 +58,7 @@ Ekoparty BlueSpace Workshop 2021
 
 ### Code Substitution Packers 
 Understanding UPX
-1. Finding the "Tail jump"
+1. Finding the *Tail jump*
 
     Even though UPX is one of the easiest packers to understand an defeat, it is still being used by Threat Actors, specially as a second protection layer (yes, you can find samples protected with multiple layers of packing code). 
     
