@@ -3,7 +3,7 @@
 Ekoparty BlueSpace Workshop 2021
 
 ## Requirements
-* Máquina virtual: https://drive.google.com/file/d/1AdC0ceCzjfADOc-Gn4veEqNFYEQwzmlX/view?usp=drivesdk
+* Virtual machine: https://drive.google.com/file/d/1AdC0ceCzjfADOc-Gn4veEqNFYEQwzmlX/view?usp=drivesdk
 
 ## Definitions 
 * Software packer: Tool used by software developers (malicious or not) to shield programs against reverse engineering.
@@ -21,13 +21,16 @@ Ekoparty BlueSpace Workshop 2021
 ### Is it packed?
 1. Signature-based detection:
 
-    Depending on the packer you are facing, it could be easily detected Ex: [Detect It Easy](https://github.com/horsicq/DIE-engine/releases)
+    Depending on the packer you are facing, sometimes it is super easy to recognize it just by using static analysis tools such as [Detect It Easy](https://github.com/horsicq/DIE-engine/releases) and [PEiD](https://www.aldeid.com/wiki/PEiD). This kind of tools rely on a set of signatures known for several packers, so its performance its limited when you are dealing with a custom packer; however it is always good to try it.
+    
+    Below an example of this kind of detection for the UPX packer in the software Detect It Easy.
     
     ![image](https://user-images.githubusercontent.com/8562692/140227209-a93b7d07-afe6-45cf-b8d4-8229c013159c.png)
 
 
 2. Strings, imports and exports analysis
-    dfsdfsdfsdf
+    
+    
     
     ![image](https://user-images.githubusercontent.com/8562692/140229300-c5748c5c-2ca2-449b-825e-6d5c3710ac7b.png)
 
