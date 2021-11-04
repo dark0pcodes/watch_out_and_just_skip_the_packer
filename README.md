@@ -38,16 +38,21 @@ Ekoparty BlueSpace Workshop 2021
     
     If you look at the sections of a PE file you will find two interesting values: *raw-size* and *virtual-size*. These values inform the OS the size of each section in disk and the required space in memoy to handle its corresponding data. 
     
-    In an unpacked sample, these values have comparable magnitudes, however in some packers you will see a huge difference, this is a great indicator that something is hidden. Below, the information of each section of the packed sample (left) and unpacked sample (right) are presented. 
+    In an unpacked sample these values are comparable in magnitude, however if you are dealing with a packed sample; sometimes you could see a huge difference between those values, this is a great indicator that something is hidden. Below, the information of each PE section is provided for both the packed sample (left) and unpacked sample (right). 
     
     ![image](https://user-images.githubusercontent.com/8562692/140231353-3c6b4197-d1a2-4806-9fe7-f148ee096456.png)
 
 4. Entropy analysis 
-    sdfadfasdasd
+    
+    Entropy in the context of information, can be defined as the average level of "uncertainty" in the outcome of a variable. In other words, the higher the entropy the more random a variable looks like. 
+    
+    This is important when we are dealing with packers, because they usually apply cryptographic algorithms to protect the data; increasing the entropy of the final sample. Long story short, a sample with high entropy is more likely to have encrypted data or being packed. See below an entropy comparison, between a packed (left) and an unpacked sample (right).
     
     ![image](https://user-images.githubusercontent.com/8562692/140231605-67130b78-fdd7-4012-b0ab-5a8437dac2f5.png)
 
-5. Dynamic results vs static characteristics
+5. Dynamic results vs static characteristics:
+
+    This validation is quite simple, just execute the sample in your VM and compare the behavior with the static characteristics of the sample (strings, imports, exports); if there's a mismatch between both analyses, it is clear that something is hiding the true nature of the sample.
 
 ### Code Substitution Packers 
 Understanding UPX
