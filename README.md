@@ -129,15 +129,22 @@ Ekoparty BlueSpace Workshop 2021
     4. Shellcode is decrypted.
     5. Shellcode is executed.
 
-    Below the section of code used in steps 1 - 4 is shown. Step 5, can be easily found just returning from the current function and steping into the next call instruction.
+    Below the section of code used in steps 1 - 4 is shown; you can stop execution of the code in this part just setting a breakpoint in *LocallAlloc*. Step 5, can be easily found just returning from the current function and steping into the next call instruction.
     Remember that all the code that is going to be analyzed from this point on, only exists in memory, it was injected by the packer to make detection harder.
 
 ![image](https://user-images.githubusercontent.com/8562692/140274435-652cae1f-a34d-46b7-8f61-01fb774676d0.png)
 
 3. Finding second injected shellcode (VirtualAlloc)
 
+    There is another hidden shellcode in this packer that takes care of the payload decryption and the final code substitution. To capture the exact code that handles this operation you need to set a new breakpoint in *VirtualAlloc*. The injetion process of this new code can be summarized as follows:
+    
+    1. Memory is allocated using *VirtualAlloc*.
+    2. Shellcode is decrypted in the new memory location.
+    3. Shellcode is executed. 
+
+    In the figure below, you can see the all three stages of this injection directly on the debugger.
+
 ![image](https://user-images.githubusercontent.com/8562692/140274983-5487bb9b-ba3b-42fd-aafb-826047d3b2ad.png)
-![image](https://user-images.githubusercontent.com/8562692/140273981-22e08c0d-fd73-4ca2-afb4-77e0573025c2.png)
 
 4. Payload decryption (VirtualAlloc)
 
