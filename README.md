@@ -60,7 +60,7 @@ Ekoparty BlueSpace Workshop 2021
 Understanding UPX
 1. Finding the *Tail jump*
 
-    Even though UPX is one of the easiest packers to understand an defeat, it is still being used by Threat Actors, specially as a second protection layer (yes, you can find samples protected with multiple layers of packing code). 
+    Even though UPX is one of the easiest packers to understand and defeat, it is still being used by Threat Actors, specially as a second protection layer (yes, you can find samples protected with multiple layers of packing code). 
     
     In this workshop, we are going to used UPX to learn one of the key concepts of unpacking; the famous *tail jump*. By definition, the *tail jump* is the instruction in which the packer execution ends and the control flow is redirected to the entry point of the unpacked sample. This jump can be implemented in several different ways, some of them are listed below:
     * `JMP OEP_ADDRESS`
