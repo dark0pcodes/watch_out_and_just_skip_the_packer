@@ -60,7 +60,9 @@ Ekoparty BlueSpace Workshop 2021
 Understanding UPX
 1. Finding the *Tail jump*
 
-    Even though UPX is one of the easiest packers to understand and defeat, it is still being used by Threat Actors, specially as a second protection layer (yes, you can find samples protected with multiple layers of packing code). UPX is a substitution packer, that means it replaces some of the contents of the original imaged loaded by the OS in memory, the diagram that explains this behaviour is displayed below.
+    Even though UPX is one of the easiest packers to understand and defeat, it is still being used by Threat Actors, specially as a second protection layer (yes, you can find samples protected with multiple layers of packing code). 
+    
+    UPX is a substitution packer, that means it replaces some of the contents of the original imaged loaded by the OS in memory, the diagram that explains this behaviour is displayed below.
     
     ![image](https://user-images.githubusercontent.com/8562692/140294933-d12eaed3-06e3-467f-9461-254d4754d4c9.png)
     
