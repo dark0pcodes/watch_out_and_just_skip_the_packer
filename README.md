@@ -103,7 +103,7 @@ Understanding UPX
 
     One of the main differences between an executable mapped into memory and a its image on disk is the way imports are handle. In the case of a PE file on disk, it contains a structure called the IAT (Imports Address Table) that stores the information of all the required dlls for the software to work. This structure does not exist in memory, instead, it is replaced by the actual images of every dll listed in the original IAT.
     
-    Now that we have dumped a PE from memory, we need to fix/rebuild its IAT otherwise it will not work. To do so, just go to Plugins > Scylla, and in the new window click on "IAT Autosearch", then click on "Get Imports", wait until all the dlls required by the unpacked sample are listed and finally click on "Fix Dump" and load the previously dumped PE. If done correctly, this process will generate a working copy of the unpacked sample that you can use to debug and analyze using any tool you want.
+    Now that we have dumped a PE from memory, we need to fix/rebuild its IAT otherwise it will not work. To do so, just go to Plugins > Scylla, and in the new window click on "IAT Autosearch", then click on "Get Imports", wait until all the dlls required by the unpacked sample are listed and finally click on "Fix Dump" and load the previously dumped PE. If done correctly, this process will generate a working copy of the unpacked sample that you can debug and analyze using any tool you want.
 
 ![image](https://user-images.githubusercontent.com/8562692/140296881-8fa1468e-955a-4f50-90d5-325c9fe5c7f6.png)
 
