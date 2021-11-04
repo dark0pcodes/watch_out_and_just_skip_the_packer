@@ -84,7 +84,9 @@ Understanding UPX
 ![image](https://user-images.githubusercontent.com/8562692/140277622-893bde4c-0270-4c38-befd-67b29b4f6a1c.png)
 
 8. Dumping unpacked PE
+
 ![image](https://user-images.githubusercontent.com/8562692/140277373-c9db991d-540c-4500-bb8a-b65cb2fa6f02.png)
 
 9. Fixing IAT
+
 ![image](https://user-images.githubusercontent.com/8562692/140277952-1ad3ce16-7b75-40af-ba3e-dfaf457f0f6b.png)
