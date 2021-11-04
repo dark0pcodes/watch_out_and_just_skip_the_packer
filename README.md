@@ -148,8 +148,11 @@ Ekoparty BlueSpace Workshop 2021
 
 4. Payload decryption (VirtualAlloc)
 
+    The next step of this journey is to identify the exact piece of code that handles the payload decryption. This can be easily achieved just by setting a new breakpoint in *VirtualAlloc*. If you follow the code after the breakpoint is hit, you will see a piece of code that looks like the one below.
+    
+    For the sake of readability I highlighted (in red and green) the most important parts of the code. What you will see here during the debugging is basically a new PE file being copied to the new alocated memory space. You can dump directly this PE, however, just because we want to understand the whole flow, we are going to continue the execution of the packer.
+
 ![image](https://user-images.githubusercontent.com/8562692/140275736-e165e32e-8c7f-4e62-a0fc-d712fe7e00c4.png)
-![image](https://user-images.githubusercontent.com/8562692/140275862-eef1e23c-5b4a-43d9-856e-2a168ea10fdb.png)
 
 5. Code substitution (VirtualProtect)
 
