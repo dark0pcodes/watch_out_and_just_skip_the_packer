@@ -7,18 +7,15 @@ Ekoparty BlueSpace Workshop 2021
 
 ## Definitions 
 * Software packer: Tool used by software developers (malicious or not) to shield programs against reverse engineering.
-* Anti-analysis techniques:
-* Signature avoidance:
-* Shellcode:
-* Code substitution:
-* Code injection:
-* Code virtualization:
-* OEP:
-* EIP:
-* IAT:
-* Packer stub:
-* Payload:
-* Tail jump:
+* Shellcode: Small piece of code that is injected and executed directly into memory. It does not comply any of the standard executable formats, it is just code. To be executed, a shellcode requires another program acting as a loader. 
+* Code substitution packer: A packer that replaces parts of the original executable mapped into memory by the OS loader.
+* Code injection packer: A packer that allocates new memory sections in the same process or in additional process and writes shellcode or complete PE files that will be executed.
+* Hybrid packer: A packer that implements both code substitution and injection in its logic.
+* Code virtualization packer: A packer that contains a virtual machine and a copy of the program ported to a custom set of instructions (only known by the VM) that are interpreted in run-time.
+* OEP: *Original Entry Point*. This is where the code execution starts in the unpacked PE.
+* EIP: *Extended Instruction Pointer*. CPU registry which stores the address of the instruction to be executed.
+* IAT: *Import Address Table*. PE structure that contains all the information required to correctly resolve the dependencies/libraries used by the software during its execution.
+* Tail jump: Instruction in which the packer execution ends and the control flow is redirected to entry point of the unpacked sample.
 
 ## Hands-On
 ### Is it packed?
