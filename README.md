@@ -110,6 +110,10 @@ Understanding UPX
 ### Hybrid Packers (Injection - Substitution) 
 1. The importance of [VirtualAlloc](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc), [LocalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-localalloc) and [GlobalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-globalalloc)
 
+    Any packer that uses injection MUST allocate additional memory sections in which the code will be written and executed. This task can be done using the Windows APIs *VirtualAlloc*, *LocalAlloc* and *GlobalAlloc*. You should keep track of these APIs when handling this kind of packers.
+    
+    For this workshop we are going to analyze a custom packer used by the REvil gang to protect their ransomware. This packer can be classified as a hybrid packer because during its execution it injects several pieces of shellcode to finally replace the complete memory image of the PE. A diagram that explains this kind of packer is shown below. 
+
 ![image](https://user-images.githubusercontent.com/8562692/140280380-e51f08ad-a176-4f48-aa8f-a4da32edbb56.png)
      
 2. Finding first injected shellcode (LocalAlloc)
