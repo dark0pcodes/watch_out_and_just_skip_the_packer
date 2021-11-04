@@ -46,7 +46,9 @@ Ekoparty BlueSpace Workshop 2021
     
     Entropy in the context of information, can be defined as the average level of "uncertainty" in the outcome of a variable. In other words, the higher the entropy the more random a variable looks like. 
     
-    This is important when you are dealing with packers, because they usually apply cryptographic algorithms to protect the data; increasing in this way the entropy of the final sample. Long story short, a sample with high entropy is more likely to have encrypted data or being packed. See below an entropy comparison between a packed (left) and an unpacked sample (right).
+    This is important when you are dealing with packers, because they usually apply cryptographic algorithms to protect the data; increasing in this way the entropy of the final sample. Long story short, a sample with high entropy is more likely to have encrypted data or being packed. 
+    
+    See below an entropy comparison between a packed (left) and an unpacked sample (right).
     
     ![image](https://user-images.githubusercontent.com/8562692/140231605-67130b78-fdd7-4012-b0ab-5a8437dac2f5.png)
 
