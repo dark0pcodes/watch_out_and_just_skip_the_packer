@@ -59,9 +59,24 @@ Ekoparty BlueSpace Workshop 2021
 ### Code Substitution Packers 
 Understanding UPX
 1. Finding the "Tail jump"
+
+![image](https://user-images.githubusercontent.com/8562692/140295316-de9617d6-b51a-4b7a-b055-171790b59223.png)
+
 2. The importance of [VirtualProtect](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect)
+
+![image](https://user-images.githubusercontent.com/8562692/140294933-d12eaed3-06e3-467f-9461-254d4754d4c9.png)
+
 3. Finding the OEP
-4. Dumping and fixing the unpacked PE
+
+![image](https://user-images.githubusercontent.com/8562692/140296467-f52c33bc-e035-449a-98c6-f6e649d62b73.png)
+
+4. Dumping unpacked PE
+
+![image](https://user-images.githubusercontent.com/8562692/140296704-79976741-317b-4a01-8e8a-d916d537de37.png)
+
+5. Fixing IAT
+
+![image](https://user-images.githubusercontent.com/8562692/140296881-8fa1468e-955a-4f50-90d5-325c9fe5c7f6.png)
 
 ### Hybrid Packers (Injection - Substitution) 
 1. The importance of [VirtualAlloc](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc), [LocalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-localalloc) and [GlobalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-globalalloc)
