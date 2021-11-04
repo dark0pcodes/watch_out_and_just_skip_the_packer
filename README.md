@@ -54,16 +54,18 @@ Understanding UPX
 
 ### Hybrid Packers (Injection - Substitution) 
 1. The importance of [VirtualAlloc](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc), [LocalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-localalloc) and [GlobalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-globalalloc)
-
-![image](https://user-images.githubusercontent.com/8562692/140238552-4b9cbaa4-69ea-47a0-a689-5cc64a8a6c0c.png)
      
 2. Finding first injected shellcode (LocalAlloc)
 
-![image](https://user-images.githubusercontent.com/8562692/140239467-9b79442f-3b26-49f8-911c-dc82d8b8f9c9.png)
+![image](https://user-images.githubusercontent.com/8562692/140274435-652cae1f-a34d-46b7-8f61-01fb774676d0.png)
+
+![image](https://user-images.githubusercontent.com/8562692/140274562-41ce1163-6386-4334-900e-d435f0d7bd7e.png)
 
 3. Finding second injected shellcode (VirtualAlloc)
 
+![image](https://user-images.githubusercontent.com/8562692/140274983-5487bb9b-ba3b-42fd-aafb-826047d3b2ad.png)
 
+![image](https://user-images.githubusercontent.com/8562692/140273981-22e08c0d-fd73-4ca2-afb4-77e0573025c2.png)
 
 4. Payload decryption (VirtualAlloc)
 5. Code substitution (VirtualProtect)
