@@ -55,6 +55,8 @@ Understanding UPX
 
 ### Hybrid Packers (Injection - Substitution) 
 1. The importance of [VirtualAlloc](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc), [LocalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-localalloc) and [GlobalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-globalalloc)
+
+![image](https://user-images.githubusercontent.com/8562692/140280380-e51f08ad-a176-4f48-aa8f-a4da32edbb56.png)
      
 2. Finding first injected shellcode (LocalAlloc)
 
