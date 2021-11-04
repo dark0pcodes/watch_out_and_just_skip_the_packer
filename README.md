@@ -149,7 +149,7 @@ Understanding UPX
     For this, jus repeat the steps followed when unpacking UPX.
     
 ### Code Injection Packers (Proccess Injection)
-Aside from the packers already explained, there are a special type that inject its malicious code in external processes, however they are out of the scope of this workshop by now. However, in case you are curious enought to study this topic by your own, I recommend the following literature:
+Aside from the packers already explained, there are a special type that inject its malicious code into external processes to make its detection harder, however they are out of the scope of this workshop by now. However, in case you are curious enought to study this topic by your own, I recommend the following literature:
 
 * https://attack.mitre.org/techniques/T1055/
 * https://www.elastic.co/blog/ten-process-injection-techniques-technical-survey-common-and-trending-process
