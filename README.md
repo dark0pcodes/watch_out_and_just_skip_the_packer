@@ -129,7 +129,7 @@ Ekoparty BlueSpace Workshop 2021
     4. Shellcode is decrypted.
     5. Shellcode is executed.
 
-    Below the section of code used in steps 1 - 4 is shown. Step 5, can be easily found easily just returning from the current function and steping into the next call instruction. you will see a code in your debbuger that should look like the one below. 
+    Below the section of code used in steps 1 - 4 is shown. Step 5, can be easily found just returning from the current function and steping into the next call instruction. you will see a code in your debbuger that should look like the one below. 
     
     Take into consideration, that all this code that is being analyzing from now on, only exists in memory, and it was injected by the packer to make detection harder.
 
