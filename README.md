@@ -129,15 +129,11 @@ Ekoparty BlueSpace Workshop 2021
     4. Shellcode is decrpyted.
     5. Shellcode is executed.
 
-    Below the section of code used in steps 1 - 4 is shown.
+    Below the section of code used in steps 1 - 4 is shown. Step 5, can be easily found easily just returning from the current function and steping into the next call instruction. you will see a code in your debbuger that should look like the one below. 
+    
+    Take into consideration, that all this code that is being analyzing from now on, only exists in memory, and it was injected by the packer to make detection harder.
 
 ![image](https://user-images.githubusercontent.com/8562692/140274435-652cae1f-a34d-46b7-8f61-01fb774676d0.png)
-
-    
-    Once the execution is passed to the shellcode, you will see a code in your debbuger that should look like the one below. This section of code only exists in memory, and it was injected by the packer to make detection harder.
-    
-    
-![image](https://user-images.githubusercontent.com/8562692/140274562-41ce1163-6386-4334-900e-d435f0d7bd7e.png)
 
 3. Finding second injected shellcode (VirtualAlloc)
 
