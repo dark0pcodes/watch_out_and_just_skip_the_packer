@@ -154,6 +154,8 @@ Ekoparty BlueSpace Workshop 2021
 
 7. Finding the OEP
 
+  Once you have found the *tail jump*, just step into it by hitting the F7 key, you will be redirected to the entry point of the unpacked sample, the OEP. If done correctly, you will see something like the image below.
+
 ![image](https://user-images.githubusercontent.com/8562692/140277622-893bde4c-0270-4c38-befd-67b29b4f6a1c.png)
 
 8. Dump the unpacked PE and fix the IAT
