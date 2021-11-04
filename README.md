@@ -81,17 +81,27 @@ Understanding UPX
 
     Based on its documentation, *VirtualProtect* is a Windows API that allows to "change the protection on a region of committed pages in the virtual address space of the calling process". This is quite important when dealing with packers because they constantly update the protections of all the different memory pages that are used in the unpacking logic in order to write and execute the original code.
     
-    In the case of UPX, it uses this API a few lines of code before hitting the *tail jump*. You could think that this only happens in UPX, but it is actually very common, packers usually called *VirtualProtect* in the code that is close to its tail jump, so you need to keep alway an eye on this API. 
+    In the case of UPX, it uses this API a few lines of code before hitting the *tail jump*. You could think that this only happens in UPX, but it is actually very common, packers usually call *VirtualProtect* in the code that is close to its tail jump, so you need to keep alway an eye on this API. 
 
 3. Finding the OEP
+
+    Once you have found the *tail jump*, just step into it by hitting the F7 key, you will be redirected to the entry point of the unpacked sample, the OEP. 
+    
+    Below the OEP of the executable "packed_remcos.exe" is shown.
 
 ![image](https://user-images.githubusercontent.com/8562692/140296467-f52c33bc-e035-449a-98c6-f6e649d62b73.png)
 
 4. Dumping unpacked PE
 
+     Now that you are in the OEP, you just need to extract the contents of the original executable and save it to disk. This can be achieved using the plugin OllyDumpEx.
+     
+     To use it just go to Plugins > OllyDumpEx > Dump process; in the new window, click in "GET EIP as OEP",  which basically instructs the software to set the address of the current instruction as the entry point of the dumped executable, then click Dump and choose the path where you want to store the new executable
+
 ![image](https://user-images.githubusercontent.com/8562692/140296704-79976741-317b-4a01-8e8a-d916d537de37.png)
 
 5. Fixing IAT
+
+    At this 
 
 ![image](https://user-images.githubusercontent.com/8562692/140296881-8fa1468e-955a-4f50-90d5-325c9fe5c7f6.png)
 
@@ -127,10 +137,5 @@ Understanding UPX
 
 ![image](https://user-images.githubusercontent.com/8562692/140277622-893bde4c-0270-4c38-befd-67b29b4f6a1c.png)
 
-8. Dumping unpacked PE
-
-![image](https://user-images.githubusercontent.com/8562692/140277373-c9db991d-540c-4500-bb8a-b65cb2fa6f02.png)
-
-9. Fixing IAT
-
-![image](https://user-images.githubusercontent.com/8562692/140277952-1ad3ce16-7b75-40af-ba3e-dfaf457f0f6b.png)
+8. Dump the unpacked PE and fix the IAT
+    For this, jus repeat the steps followed when unpacking UPX.
