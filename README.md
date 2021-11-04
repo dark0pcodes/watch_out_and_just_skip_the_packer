@@ -126,7 +126,7 @@ Ekoparty BlueSpace Workshop 2021
     1. Memory is allocated using *LocalAlloc*.
     2. An encrypted shellcode is copied to the new memory location.
     3. Memory protections are set to *PAGE_EXECUTE_READWRITE* to allow modification and execution of the code.
-    4. Shellcode is decrpyted.
+    4. Shellcode is decrypted.
     5. Shellcode is executed.
 
     Below the section of code used in steps 1 - 4 is shown. Step 5, can be easily found easily just returning from the current function and steping into the next call instruction. you will see a code in your debbuger that should look like the one below. 
