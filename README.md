@@ -118,6 +118,8 @@ Understanding UPX
      
 2. Finding first injected shellcode (LocalAlloc)
 
+    Our first stop 
+
 ![image](https://user-images.githubusercontent.com/8562692/140274435-652cae1f-a34d-46b7-8f61-01fb774676d0.png)
 ![image](https://user-images.githubusercontent.com/8562692/140274562-41ce1163-6386-4334-900e-d435f0d7bd7e.png)
 
@@ -145,3 +147,15 @@ Understanding UPX
 
 8. Dump the unpacked PE and fix the IAT
     For this, jus repeat the steps followed when unpacking UPX.
+    
+### Code Injection Packers (Proccess Injection)
+There are packers that inject its malicious code in external processes, however they are out of the scope of this workshop by now. However, in case you are curious enought to study this topic by your own, I recommend the following literature:
+
+* https://attack.mitre.org/techniques/T1055/
+* https://www.elastic.co/blog/ten-process-injection-techniques-technical-survey-common-and-trending-process
+
+Remember that to make your life easier while analyzing this type of packers you should always identify the required Windows APIs and follow their usage during the execution od the sample. API calls such as [CreateProcessA](https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa), [WriteProcessMemory](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory), [VirtualAllocEx](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex) and [ResumeThread](https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-resumethread) are just the tip of the iceberg here. 
+
+Study the interaction of each API with the OS for each type of injection is important if you want to master this.
+
+### Happy Reversing!
