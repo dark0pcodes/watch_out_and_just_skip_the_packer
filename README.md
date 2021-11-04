@@ -164,7 +164,7 @@ Ekoparty BlueSpace Workshop 2021
 
 6. Finding the "Tail jump"
 
-Finally if you want to find the tail jump, just scroll a little bit. You will see it, it is not that difficult isn't it?
+Finally if you want to find the tail jump, just scroll down a little bit. You will see it, it is not that difficult isn't it?
 
 ![image](https://user-images.githubusercontent.com/8562692/140276841-d722df0e-34bf-450f-8a49-64f02adfcdd0.png)
 
