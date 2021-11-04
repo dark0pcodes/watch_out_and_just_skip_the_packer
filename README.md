@@ -54,7 +54,13 @@ Understanding UPX
 
 ### Hybrid Packers (Injection - Substitution) 
 1. The importance of [VirtualAlloc](https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc), [LocalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-localalloc) and [GlobalAlloc](https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-globalalloc)
+
+![image](https://user-images.githubusercontent.com/8562692/140238552-4b9cbaa4-69ea-47a0-a689-5cc64a8a6c0c.png)
+     
 2. Finding the "shellcode"
+
+![image](https://user-images.githubusercontent.com/8562692/140239467-9b79442f-3b26-49f8-911c-dc82d8b8f9c9.png)
+
 4. Finding the "Tail jump"
 5. Finding the OEP
-4. Dumping and fixing the unpacked PE
+6. Dumping and fixing the unpacked PE
