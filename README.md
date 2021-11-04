@@ -28,14 +28,15 @@ Ekoparty BlueSpace Workshop 2021
     ![image](https://user-images.githubusercontent.com/8562692/140227209-a93b7d07-afe6-45cf-b8d4-8229c013159c.png)
 
 
-2. Strings, imports and exports analysis
-    
-    
+2. Strings, imports and exports analysis:
+
+    One of the main goals of a packer is to hide the valuable code and data. This is clearly visible when you statically compare a packed and an unpacked version of a software (see below, strings of the packed sample in the left and strings of the unpacked sample in the right). The amount of interesting and valuable data that is available during the static analysis in a packed software is drastically reduced.
     
     ![image](https://user-images.githubusercontent.com/8562692/140229300-c5748c5c-2ca2-449b-825e-6d5c3710ac7b.png)
 
-3. PE structure analysis
-    hfhgffhgfh
+3. PE structure analysis:
+    
+    If you look at the sections of a PE file you will find two interesting values: *raw-size* and *virtual-size*. These values inform the OS the size of each section in disk and the required space in memoy to handle its corresponding data. In an unpacked sample, these values have comparable magnitudes, however in some packers you will see a huge difference, this is a great indicator that something is hidden. Below, the information of each section of the packed sample (left) and unpacked sample (right) are presented. 
     
     ![image](https://user-images.githubusercontent.com/8562692/140231353-3c6b4197-d1a2-4806-9fe7-f148ee096456.png)
 
