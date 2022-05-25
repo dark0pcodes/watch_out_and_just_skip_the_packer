@@ -3,7 +3,7 @@
 Ekoparty BlueSpace Workshop 2021
 
 ## Requirements
-* Virtual machine: https://drive.google.com/file/d/1AdC0ceCzjfADOc-Gn4veEqNFYEQwzmlX/view?usp=drivesdk
+* Virtual machine: 
 
 ## Definitions 
 * Software packer: Tool used by software developers (malicious or not) to shield programs against reverse engineering.
